@@ -1,4 +1,14 @@
+import sys
+
 def jp(input_num):
+    """Generate Japanese numeral format string.
+
+    Args:
+        input_num (str, int, float): target number
+
+    Returns:
+        str: Generated string.
+    """
     return num2cnum(
         input_num,
         [
@@ -26,6 +36,14 @@ def jp(input_num):
     )
 
 def scn(input_num):
+    """Generate simplified Chinese numeral format string.
+
+    Args:
+        input_num (str, int, float): target number
+
+    Returns:
+        str: Generated string.
+    """
     return num2cnum(
         input_num,
         [
@@ -53,6 +71,14 @@ def scn(input_num):
     )
 
 def tcn(input_num):
+    """Generate traditional Chinese numeral format string.
+
+    Args:
+        input_num (str, int, float): target number
+
+    Returns:
+        str: Generated string.
+    """
     return num2cnum(
         input_num,
         [
@@ -80,6 +106,14 @@ def tcn(input_num):
     )
 
 def kn(input_num):
+    """Generate Korean numeral format string.
+
+    Args:
+        input_num (str, int, float): target number
+
+    Returns:
+        str: Generated string.
+    """
     return num2cnum(
         input_num,
         [
@@ -107,7 +141,28 @@ def kn(input_num):
     )
 
 def num2cnum(input_num, integer_numerals, decimal_numerals):
-    input_str = str(input_num)
+    """Generate various numeral format string.
+
+    Args:
+        input_num (str, int, float): target number
+        integer_numerals (list): check README.md
+        decimal_numerals (list): check README.md
+
+    Returns:
+        str: Generated string.
+    """
+    if (type(input_num) is int) or (type(input_num) is float):
+        input_str = str(input_num)
+    elif (type(input_num) is str):
+        try:
+            float(input_num)
+        except ValueError:
+            print('[ERROR] "%s" is not number.' % input_num)
+            sys.exit()
+        input_str = input_num
+    else:
+        print('[ERROR] cnum just supports following types: str or int or float')
+        sys.exit()
     
     out_str = ''
 

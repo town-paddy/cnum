@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="cnum",
-    version="0.0.3",
+    version="0.0.6",
     author="town_paddy",
     author_email="town_paddy@yahoo.com",
     description="Change int and float value to Chinese numeral format string",
