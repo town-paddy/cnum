@@ -5,13 +5,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="cnum",
-    version="0.0.1",
+    version="0.0.2",
     author="town_paddy",
     author_email="town_paddy@yahoo.com",
     description="Change int and float value to Chinese numeral format string",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject",
+    url="https://github.com/town-paddy/cnum",
     project_urls={
         "website": "https://sites.google.com/view/kumake/english",
         "twitter": "https://twitter.com/tweet_paddy"
