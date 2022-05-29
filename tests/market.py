@@ -15,6 +15,7 @@ def usd2krw(usd):
 if __name__ == '__main__':
     APPLE_MARKET_VALUE = 2421953134592
     print("=== Apple company's market value in 2022 ===")
+    print('- USD: %d' % APPLE_MARKET_VALUE)
     print('- JPY: %s' % cnum.jp(usd2jpy(APPLE_MARKET_VALUE)))
     print('- RMD: %s' % cnum.scn(usd2rmd(APPLE_MARKET_VALUE)))
     print('- HKD: %s' % cnum.tcn(usd2hkd(APPLE_MARKET_VALUE)))

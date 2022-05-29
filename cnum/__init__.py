@@ -122,7 +122,7 @@ def num2cnum(input_num, integer_numerals, decimal_numerals):
             if int(out_str[0:cnt]) == 0:
                 out_str = out_str[cnt+1:]
             if len(integer_str) != i + 1:
-                out_str = integer_numerals[i] + out_str     
+                out_str = integer_numerals[i] + out_str.lstrip('0')    
             cnt = 0
 
     # input data is integer.
@@ -146,6 +146,6 @@ def num2cnum(input_num, integer_numerals, decimal_numerals):
             else:
                 tmp = tmp + float_str[i]
                 if int(tmp) != 0:
-                    out_str = out_str + tmp + decimal_numerals[i]
+                    out_str = out_str + tmp.lstrip('0') + decimal_numerals[i]
                 tmp = ''
         return out_str
